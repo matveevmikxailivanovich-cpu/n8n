@@ -3,3 +3,13 @@ builder = "nixpacks"
 
 [deploy]
 startCommand = "n8n start"
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "n8n start"
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 10
+
+[variables]
+PORT = "5678"
